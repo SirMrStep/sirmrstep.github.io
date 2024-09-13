@@ -1,4 +1,4 @@
-body {
+html body {
     background-color: dimgray;
 }
 
@@ -30,8 +30,4 @@ body {
     position: absolute;
     width: 100%; height: 100%;
     top: 5%; left: 0;
-}
-
-.downloads {
-    position: ;
 }
