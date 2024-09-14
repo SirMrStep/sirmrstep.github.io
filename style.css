@@ -1,5 +1,5 @@
 html body {
-    background-color: dimgray;
+    background-color: #565656;
 }
 
 .navbar {
@@ -10,36 +10,65 @@ html body {
     width: 100%;
     height: 5%;
     border-bottom: solid black;
+    justify-content: left;
     align-items: center;
-    justify-content: space-between;
+    background-color: #3F3F3F;
 }
 
-.navbar * {
-    margin: 2%;
+.navbar > a { /* These are the boxes holding the text */
+    display: flex;
+    padding-left: 1%;
+    padding-right: 1%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Needed here otherwise the underline from
+                              href will show up */
 }
 
-.page {
+.navbar > a > div { /* The actual text (inside of a div) */
+    display: flex;
+    color: orange;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.page { /* page div below the navbar*/
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 100%; height: 100%;
+    width: 100%; height: 95%;
+    max-width: 100%;
+    max-height: 95%;
     top: 5%; left: 0;
 }
 
-.page * {
+.page > div {
     margin: 1%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
-.downloads {
-    margin: 0;
+.page .nerd { /* nerd image on download page */
+    max-height: 100%;  max-width: 100%;
+    width: 100%; height: 100%;
+    min-height: 0; min-width: 0;
+    position: fixed;
+}
+
+.downloads * { /* list containing all the downloads */
+    margin: 1%;
     display: flex;
     flex-direction: column;
-    position: fixed;
     left: 0;
-    width: 100%;
-    height: auto;
+    width: fit-content; height: fit-content;
+    max-width: 100%; max-height: 100%;
 }
 
-.downloads * {
-    width: fit-content; height: fit-content;
+/** > div {
+    border: solid black;
 }
